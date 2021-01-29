@@ -1,9 +1,9 @@
 <h1>口罩地圖</h1>
-<p><a href="https://mask-map-rwd-evayu.surge.sh/">地圖DEMO</a></p>
-<p><a href="https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.json">藥局、口罩數資料來源</a></p>
-<p>UI Credit: <a href="https://challenge.thef2e.com/user/3405?schedule=4432#works-4432">Penny Yang</a></p>
-<p>定位功能：<a href="https://developer.mozilla.org/zh-TW/docs/Web/API/Geolocation/Using_geolocation">Geolocation API</a>
-<p>地圖圖資：<a href="https://developers.google.com/maps/documentation/javascript/overview">Google Map API</a></p>
+<p><a target="blank" href="https://mask-map-rwd-evayu.surge.sh/">地圖DEMO</a></p>
+<p><a target="blank" href="https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.json">藥局、口罩數資料來源</a></p>
+<p>UI Credit: <a target="blank" href="https://challenge.thef2e.com/user/3405?schedule=4432#works-4432">Penny Yang</a></p>
+<p>定位功能：<a target="blank" href="https://developer.mozilla.org/zh-TW/docs/Web/API/Geolocation/Using_geolocation">Geolocation API</a>
+<p>地圖圖資：<a target="blank" href="https://developers.google.com/maps/documentation/javascript/overview">Google Map API</a></p>
 </p>
 <p>計算距離：
 <a href="https://developers.google.com/maps/documentation/distance-matrix/overview">Google Distance MatrixAPI</a>
