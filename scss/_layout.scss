@@ -1,0 +1,105 @@
+body {
+    box-sizing: border-box;
+    margin: 0 auto;
+
+    @include desktop {
+        max-width: 1200px;
+    }
+}
+
+// header
+.header {
+    @include mobile-min {
+        background: #ffffff;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 23px;
+        line-height: 50px;
+        text-indent: 60px;
+        position: fixed;
+        z-index: 20;
+        border-bottom: 1px solid #666666;
+        padding-right: 3%;
+    }
+
+    @include pad {
+        border-left: .5px solid #000;
+        border-right: .5px solid #000;
+    }
+
+    @include desktop {
+        max-width: 1200px;
+    }
+
+
+}
+
+.logo {
+    @include mobile-min {
+        white-space: nowrap;
+        background: url(../images/logo.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: 2%;
+        background-position-y: center;
+    }
+}
+
+
+// Footer
+.footer {
+    @include mobile-min {
+        padding: 6% 4%;
+        display: block;
+        width: 100%;
+        height: 200px;
+        background: #023047;
+        color: #cecece;
+    }
+
+    @include pad {
+        padding: 3% 2%;
+    }
+
+    @include desktop {
+        // FIXME: 確認是否需動態更改樣式
+        // height: 120px;
+        // position: absolute;
+        // bottom: 80px;
+    }
+}
+
+.official-contacts {
+    @include mobile-min {
+        font-size: 16px;
+        margin-bottom: 6%
+    }
+
+    @include pad {
+        margin-bottom: 2%;
+        font-size: 18px;
+    }
+}
+
+.footer-text {
+    @include mobile-min {
+        font-size: 12px;
+        font-weight: 100;
+        line-height: 1.5;
+        margin-bottom: 6%;
+    }
+
+    @include pad {
+        margin-bottom: 2%;
+        font-size: 16px;
+    }
+}
+
+.design-name {
+    @include mobile-min {
+    font-size: 14px;
+    padding-bottom: 1em;
+    }
+}

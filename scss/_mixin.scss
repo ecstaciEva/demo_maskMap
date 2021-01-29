@@ -1,0 +1,15 @@
+@mixin clearfix {
+    &::before, &::after {
+        content: "";
+        display: table;
+    }
+    &::after {
+        clear: both;
+    }
+}
+
+@mixin logo-text-hide {
+    white-space: nowrap;
+    text-indent: 101%;
+    overflow: hidden;
+}

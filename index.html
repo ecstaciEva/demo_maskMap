@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>口罩地圖 -byEva</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="./css/all.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <header class="header">
+            <h1 class="logo">口罩即時查</h1>
+        </header>
+
+        <!-- content => 放置地圖的容器 -->
+        <div class="content aside-open" id="map">
+
+            <div class="aside" id="aside">
+
+                <div class="scroll-section" id="scrollSection">
+
+                    <div class="top-section" id="topSection">
+                        <div class="aside-switch" id="asideSwitch"></div>
+                        <p class="buyer"><span class="buyer-category" id="buyerCategory"></span>購買日</p>
+                        <p class="update-text">資訊更新時間：<span class="update-time" id="updateTime"></span></p>
+                        <button class="online-shop-btn">
+                            <a href="https://emask.taiwan.gov.tw/msk/index.jsp" target="_blank">口罩線上預購</a>
+                        </button>
+                        <button class="reload-list-btn" id="reloadBtn">重新載入</button>
+
+                        <div class="select-area" id="selectArea">
+
+                            <select class="county-select" id="countySelect" name="county" placeholder="請選擇縣市"></select>
+
+                            <select class="town-select" name="town" id="townSelect">
+                                <option value="" selected disabled>-- 請選行政區 --</option>
+                            </select>
+
+                        </div>
+
+                        <div class="search-area">
+                            <input type="text" class="search-input" id="searchInput" placeholder="請輸入藥局名稱或地址">
+                            <button class="search-submit" id="searchSubmit"></button>
+                        </div>
+
+                    </div>
+
+                    <ul class="result-list" id="resultList">
+                        <li class="result-list-default" id="resultListDefault">請選擇地區或輸入關鍵字</li>
+                    </ul>
+
+                    <p class="not-show-result-text">
+                        尚有
+                        <span class="not-show-result-num" id="notShowResultNum">-</span>
+                        筆
+                    </p>
+
+                    <div class="btns" id="btns">
+                        <button class="see-more-btn" id="seeMoreBtn" data-renderNum="0">查看更多</button>
+                        <a href="#topSection" class="return-to-top" id="returnToTopBtn"></a>
+                    </div>
+
+                    <footer class="footer">
+                        <p class="official-contacts">防疫專線 1922 | 口罩專線 1919</p>
+                        <p class="footer-text">
+                            感謝藥師們的辛勞及所有為本次疫情付出的人們
+                            <br>
+                            購買口罩請多體諒藥師　　一起共度疫情
+                        </p>
+                        <p class="design-name">Eva Yu / PY Design</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+    <!-- Google Maps -->
+    <!-- Marker Clusters -->
+    <script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
+    <!-- my Javascript -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

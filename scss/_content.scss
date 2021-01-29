@@ -1,0 +1,564 @@
+.wrapper {
+    height: auto;
+}
+
+.content {
+    @include mobile-min {
+        display: block;
+        width: 100%;
+        padding-top: 50px;
+        position: relative;
+    }
+
+    @include pad {
+        padding-top: 50px;
+    }
+}
+
+// 資訊欄
+.aside {
+    @include mobile-min{
+        box-sizing: border-box;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 95%;
+        height: auto;
+        background-color: #fafafa;
+        padding-top: 3%;
+        font-size: 18px;
+        border: 1px solid $deep-blue;
+        z-index: 20;
+    }
+
+    @include desktop {
+        box-sizing: border-box;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 30%;
+        height: auto;
+        background-color: #fafafa;
+        padding-top: 3%;
+        font-size: 18px;
+        border: 1px solid $deep-blue;
+        z-index: 19;
+    }
+}
+
+.aside-open {
+    @include mobile-min {
+        & > .aside {
+            transform: translateX(0);
+            transition: transform .5s;
+        }
+    }
+}
+
+.aside-close {
+    @include mobile-min {
+        & > .aside {
+            transform: translateX(-94%);
+            transition: transform .5s;
+        }
+    }
+}
+
+.aside-switch {
+    @include mobile-min {
+        width: 0px;
+        height: 65px;
+        border-style: solid;
+        border-width: 15px;
+        border-color: transparent transparent transparent #fafafa;
+        border-radius: 5px;
+        position: fixed;
+        z-index: 2147483647;
+        right: -24px;
+        top: 50px;
+        font-size: 18px;
+        text-align: left;
+        line-height: 15px;
+
+        &::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f054";
+            color: $deep-blue;
+            position: absolute;
+            left: -11px;
+            top: 12px;
+        }
+    }
+
+    @include desktop {
+        display: none;
+    }
+}
+
+.scroll-section {
+    @include mobile-min {
+        width: 100%;
+        overflow-y: auto;
+    }
+}
+
+.top-section {
+    @include mobile-min {
+        padding: 0 4%;
+    }
+}
+
+.buyer {
+    @include mobile-min {
+        color: $deep-blue;
+        display: inline-block;
+        padding-bottom: 5%;
+
+        & > .buyer-category {
+            font-size: 24px;
+            display: inline-block;
+            padding-right: 5px;
+        }
+    }
+}
+
+.online-shop-btn {
+    @include mobile-min {
+        display: inline-block;
+        width: 8.5em;
+        height: 35px;
+        background: $deep-blue;
+        border: none;
+        border-radius: 20px;
+        box-shadow: 0px 0px 5px #666666;
+
+        & > a {
+            color:#ffffff;
+        }
+        
+        &:active {
+            outline: none;
+            background-color: #263849;
+            transform: translateY(2px);
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.reload-list-btn {
+    @include mobile-min {
+        height: 35px;
+        width: 8.5em;
+        border: none;
+        color: #34495e;
+        background: transparent;
+        border: 2px solid #34495e;
+        border-radius: 20px;
+        margin-left: 5%;
+
+        &:active {
+            outline: none;
+            background: #34495e;
+            color: #ffffff;
+
+            transform: translateY(2px);
+        }
+
+        &:focus {
+            outline: none;
+        }
+    } 
+}
+
+.update-text {
+    @include mobile-min {
+        display: block;
+        color: #34495e;
+        font-size: 14px;
+        font-weight: 100;
+        line-height: 1.5;
+    }
+}
+
+.update-text {
+    @include mobile-min {
+        padding-bottom: 5%;
+    }
+}
+
+
+.county-select, .town-select {
+    @include mobile-min {
+        display: inline-block;
+        margin: 5% 5% 5% 0;
+        border: 1px solid $deep-blue;
+        background-color: transparent;
+        height: 25px;
+        width: 40%;
+        border-radius: 5px;
+
+        // 設定內部文字樣式
+        text-indent:10%;
+        font-size: 12px;
+        color: $deep-blue;
+        line-height: 24px;
+        
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.search-area {
+    @include mobile-min {
+        width: 87%;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.search-input {
+    @include mobile-min {
+        width: 70%;
+        height: 30px;
+        border: 1px solid $deep-blue;
+        border-radius: 5px;
+        background: transparent;
+        text-indent: 5%;
+        font-size: 13px;
+        color: $deep-blue;
+        line-height: 30px;
+    }
+
+    @include desktop {
+        width: 80%;
+    }
+}
+
+.search-submit {
+    @include mobile-min {
+        border-radius: 5px;
+        box-shadow: none;
+        border: none;
+        background-color: $deep-blue;
+        height: 30px;
+        width: 30px;
+        position: relative;
+    }
+
+    &::before {
+        font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f002";
+            color: #fff;
+            font-size: 13px;
+            position: absolute;
+            left: 50%;
+            top: 25%;
+            transform: translateX(-50%);
+    }
+
+    &:active, &:focus {
+        outline: none;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+// 藥局列表
+.result-list {
+    @include mobile-min {
+        width: 100%;
+        margin: 0 auto;
+        padding: 7% 4% 0 4%;
+
+        & > li {
+            background-color: #fff;
+            box-shadow: 0px 0px 10px #b8b8b8;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    }
+
+    // FIXME: 
+    @include pad {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+
+        & > li {
+            width: 47.5%;
+        }
+    }
+
+    @include desktop {   
+        & > li {
+            width: 100%;
+            align-items: center;
+        }
+    }
+}
+
+#resultListDefault {
+    @include mobile-min {
+        height: 8em;
+        margin-bottom: 7%;
+        background-color: #a8b8d4;
+        color: #14213d;
+        text-align: center;
+        line-height: 8em;
+    }
+
+    @include pad {
+        display: block;
+        width: 90%;
+        margin: 0 auto 4% auto;
+    }
+}
+
+.result {
+    @include mobile-min {
+        margin-bottom: 7%;
+    }
+}
+
+
+.result-cards {
+    @include mobile-min {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 5% 0;
+    }
+
+    // FIXME: pad
+}
+
+.result-card {
+    @include mobile-min {
+        width: 47.5%;
+        height: 90px;
+        border-radius: 10px;
+        position: relative;
+        color: #ffffff;
+    }
+}
+
+.card-text {
+    @include mobile-min {
+        font-size: 14px;
+        padding: 10% 0 0 10%;
+
+    }
+}
+
+.mask-left {
+    @include mobile-min {
+        padding-top: 1em;
+        padding-left: 10%;
+
+        & > .mask-number {
+            font-size: 30px;
+            padding-right: 5px;
+        }
+    }
+}
+
+.result-card-img {
+    @include mobile-min {
+        position: absolute;
+        right: -5px;
+        bottom: 10px;
+    }
+}
+
+.result-name {
+    @include mobile-min {
+        font-size: 18px;
+
+        & > .result-distance {
+            font-size: 12px;
+            padding-left: 1%;
+        }
+
+        /*
+        & > .result-situation {
+            display: inline-block;
+            margin-left: 3%;
+            height: 23px;
+            width: 50px;
+            border-radius: 5px;
+            background: #e7f5f3;
+            font-size: 13px;
+            font-weight: 100;
+            color: $open-now;
+            line-height: 23px;
+            text-align: center;
+        }
+        */
+    }
+}
+
+.result-name {
+    color: $deep-blue;
+    
+    @include mobile-min {
+        padding-left: 5%;
+    }
+}
+
+.result-info-list {
+    @include mobile-min {
+        width: 100%;
+        margin-top: 3%;
+        font-size: 15px;
+        font-weight: 100;
+        color: $deep-blue;
+        padding-left: 5%;
+        padding-bottom: 3%;
+
+        & > li {
+            line-height: 2;
+            width: 95%;
+
+            & > span {
+                font-weight: 800;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.result-on-map {
+    @include mobile-min {
+        color: #e63946;
+        font-size: 18px;
+        padding-left: 10px;
+    }
+}
+
+.not-show-result-text {
+    @include mobile-min {
+        text-align: center;
+        font-size: 14px;
+        color: $deep-blue;
+        padding-bottom: 5%;
+    }
+}
+
+.btns {
+    @include mobile-min {
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+}
+
+.see-more-btn {
+    @include mobile-min {
+        display: inline-block;
+        width: 8.5em;
+        height: 40px;
+        border: none;
+        background-color: $deep-blue;
+        color: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0px 0px 5px #666666;
+        margin-bottom: 10%;
+        transition: transform .15s ease-in;
+
+        &:active {
+            outline: none;
+            transform: translateY(3px);
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.return-to-top {
+    @include mobile-min {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: none;
+        background: $deep-blue;
+        box-shadow: 0 0 5px #666666;
+        position: absolute;
+        right: 5%;
+        top: 0;
+        transition: transform .15s ease-in;
+
+        &:active {
+            outline: none;
+            transform: translateY(3px);
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f106";
+            color: #fff;
+            font-size: 13px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            line-height: 40px;
+        }
+
+    }
+}
+
+
+// Google Maps InfoWindow
+.clicked-info-window {
+    @include mobile-min {
+        padding: 1%;
+        width: 100px;
+        height: 100px;
+        
+        & > p, h1 {
+            white-space: nowrap;
+            line-height: 1.8;
+            text-align: left;
+        }
+
+        & > h1 {
+            font-size: 15px;
+        }
+
+        & > p {
+            font-size: 13px;
+        }
+
+
+    }
+}
+
+.get-position-error {
+    @include mobile-min {
+        font-size: 18px;
+        color: red;
+        display: block;
+        position: relative;
+        font-weight: 700;
+        text-align: center;
+        width: auto;
+        overflow-x: hidden;
+    }
+}
